@@ -32,8 +32,7 @@ const CSVDataTable = ({ data }) => {
           <table
             style={{
               backgroundColor: "rgba(245, 245, 245, 1)",
-              borderCollapse: "collapse"
-            
+              borderCollapse: "collapse",
             }}
           >
             <thead>
@@ -44,10 +43,9 @@ const CSVDataTable = ({ data }) => {
                     style={{
                       padding: "10px",
                       border: "none",
-               
-                      textAlign:'left',
+                      textAlign: "left",
                       backgroundColor: "rgba(245, 245, 245, 1)",
-                      fontFamily:'Figtree'
+                      fontFamily: "Figtree",
                     }}
                   >
                     {header}
@@ -62,13 +60,14 @@ const CSVDataTable = ({ data }) => {
                     <td
                       key={columnIndex}
                       style={{
-                        maxWidth:'20vw',
+                        maxWidth: "20vw",
                         border: "none",
-                    
                         backgroundColor:
                           rowIndex % 2 === 0
                             ? "white"
                             : "rgba(245, 245, 245, 1)",
+                        paddingLeft: "10px", // Add left padding for gap
+                        paddingRight: "10px", // Add right padding for gap
                       }}
                     >
                       {columnIndex === 3 ? (
@@ -98,6 +97,15 @@ const CSVDataTable = ({ data }) => {
                               </MenuItem>
                             ))}
                         </Select>
+                      ) : columnIndex === 1 ? (
+                        <span
+                          style={{
+                            color: "rgba(91, 147, 255, 1)",
+                            textDecoration: "underline",
+                          }}
+                        >
+                          {row[header]}
+                        </span>
                       ) : columnIndex === headers.length - 1 ? (
                         <div
                           style={{
@@ -105,18 +113,15 @@ const CSVDataTable = ({ data }) => {
                             color: "white",
                             textAlign: "center",
                             padding: "5px",
-                         
-                            
                           }}
                         >
                           {selectedOptions[rowIndex]?.map((option, index) => (
                             <span
                               style={{
-                           
                                 backgroundColor: "rgba(96, 91, 255, 1)",
                                 padding: "3px",
-                                minWidth:'4vw',
-                                marginTop:'.2vw',
+                                minWidth: "4vw",
+                                marginTop: ".2vw",
                                 borderRadius: "4px",
                                 marginRight: "5px",
                                 display: "inline-block",
