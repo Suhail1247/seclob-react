@@ -21,23 +21,23 @@ function App() {
       },
       {
         path: "/invoice", 
-        element: <Dashboard title="Invoice" invoice/>,
+        element: <Dashboard title="Invoice" navText='invoice' invoice/>,
       },
       {
         path: "/schedule",
-        element: <Dashboard title="Schedule" schedule/>,
+        element: <Dashboard title="Schedule" navText='schedule' schedule/>,
       },
       {
         path: "/calendar",
-        element: <Dashboard title="Calendar" calendar/>,
+        element: <Dashboard title="Calendar" navText='calendar' calendar/>,
       },
       {
         path: "/notification",
-        element: <Dashboard title="Notification" notification/>,
+        element: <Dashboard title="Notification" navText='notification' notification/>,
       },
       {
         path: "/settings",
-        element: <Dashboard title="Settings" settings/>,
+        element: <Dashboard title="Settings" navText='settings' settings/>,
       },
      
     ],

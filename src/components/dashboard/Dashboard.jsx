@@ -183,7 +183,7 @@ function Dashboard(props) {
   <Box sx={{  ml: 1 }}>
     <h3>{props.navText}</h3>
   </Box>
-  <Stack direction="row" spacing={2}>
+  <Stack direction="row"  spacing={2}>
     <IoNotificationsSharp style={{ fontSize: '2.5vw' , cursor:"pointer"}} />
     <Avatar alt="Remy Sharp" src={avatar} sx={{ width: "3vw", height: '3vw', cursor:"pointer"}} />
   </Stack>
