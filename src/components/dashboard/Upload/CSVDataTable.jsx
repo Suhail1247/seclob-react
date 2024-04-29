@@ -28,7 +28,7 @@ const CSVDataTable = ({ data }) => {
     <>
       {data.length === 0 ? "" : (
         <>
-          <p>Uploads</p>
+          <h3>Uploads</h3>
           <table
             style={{
               backgroundColor: "rgba(245, 245, 245, 1)",

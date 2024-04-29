@@ -6,6 +6,7 @@ import { Box } from '@mui/system';
 import papa from 'papaparse'
 
 import CSVDataTable from './CSVDataTable';
+import toast, { Toaster } from 'react-hot-toast';
 
 function Upload() {
     const [loading, setLoading] = useState(false);
@@ -46,7 +47,7 @@ function Upload() {
                     setUploaded(true);
                 }, 1000);
             } else {
-                alert('No file selected');
+                toast.error('please select a file to upload');
             }
         } catch (error) {
             console.log(error);
@@ -78,6 +79,8 @@ function Upload() {
     };
 
     return (
+        <>
+        <Toaster/>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             {!uploadedFileName && (
                 <input
@@ -134,6 +137,7 @@ function Upload() {
                 <CSVDataTable data={csvData} />
             </Box>}
         </Box>
+        </>
     );
 }
 
