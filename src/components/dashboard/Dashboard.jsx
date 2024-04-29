@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import { Avatar, Box, Grid, Typography } from "@mui/material";
+import {  Box, Grid, Typography } from "@mui/material";
+import Avatar from '@mui/material/Avatar';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import PersonAdd from '@mui/icons-material/PersonAdd';
+import Settings from '@mui/icons-material/Settings';
+import Logout from '@mui/icons-material/Logout';
 import Options from "./Options";
 import { RiDashboardFill } from "react-icons/ri";
 import logoInDash from "../../assets/LogoInDash.png";
@@ -13,6 +23,16 @@ import { IoSettingsSharp } from "react-icons/io5";
 import Upload from "./Upload/Upload";
 import { Stack } from "@mui/system";
 function Dashboard(props) {
+    const [anchorEl, setAnchorEl] = useState(null); 
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event) => { 
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <Box
       sx={{
@@ -183,9 +203,57 @@ function Dashboard(props) {
   <Box sx={{  ml: 1 }}>
     <h3>{props.navText}</h3>
   </Box>
-  <Stack direction="row"  spacing={2}>
-    <IoNotificationsSharp style={{ fontSize: '2.5vw' , cursor:"pointer"}} />
-    <Avatar alt="Remy Sharp" src={avatar} sx={{ width: "3vw", height: '3vw', cursor:"pointer"}} />
+  <Stack direction="row"  >
+    <IoNotificationsSharp style={{ fontSize: '2vw' ,marginTop:'2vh', cursor:"pointer"}} />
+    <Tooltip title="Account settings">
+          <IconButton
+            onClick={handleClick}
+            size="small"
+            sx={{ ml: 2 }}
+            aria-controls={open ? 'account-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+          >
+            <Avatar sx={{  width: "3vw", height: '3vw'}} src={avatar} />
+          </IconButton>
+        </Tooltip>
+   
+      <Menu
+        anchorEl={anchorEl}
+        id="account-menu"
+        open={open}
+        onClose={handleClose}
+        onClick={handleClose}
+
+        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+      >
+        <MenuItem onClick={handleClose}>
+          <Avatar /> Profile
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Avatar /> My account
+        </MenuItem>
+        <Divider />
+        <MenuItem onClick={handleClose}>
+          <ListItemIcon>
+            <PersonAdd fontSize="small" />
+          </ListItemIcon>
+          Add another account
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <ListItemIcon>
+            <Settings fontSize="small" />
+          </ListItemIcon>
+          Settings
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <ListItemIcon>
+            <Logout fontSize="small" />
+          </ListItemIcon>
+          Logout
+        </MenuItem>
+      </Menu>   
   </Stack>
 </Box>
             <Box
