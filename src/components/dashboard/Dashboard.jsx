@@ -18,7 +18,7 @@ import { LuBarChart2 } from "react-icons/lu";
 import { HiOutlineTicket } from "react-icons/hi";
 import { MdOutlineArticle } from "react-icons/md";
 import { FaCalendarAlt } from "react-icons/fa";
-import { IoNotificationsSharp } from "react-icons/io5";
+import { IoNotificationsOutline, IoNotificationsSharp } from "react-icons/io5";
 import { IoSettingsSharp } from "react-icons/io5";
 import Upload from "./Upload/Upload";
 import { Stack } from "@mui/system";
@@ -204,7 +204,7 @@ function Dashboard(props) {
     <h3>{props.navText}</h3>
   </Box>
   <Stack direction="row"  >
-    <IoNotificationsSharp style={{ fontSize: '2vw' ,marginTop:'2vh', cursor:"pointer"}} />
+    <IoNotificationsOutline style={{ fontSize: '2vw' ,marginTop:'2vh', cursor:"pointer"}} />
     <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
