@@ -15,7 +15,6 @@ import toast,{ Toaster } from 'react-hot-toast';
 
 function Login() {
     const [formValues,setFormValues]=useState({});
-    const [errors, setErrors] = useState({});
 
     const navigate=useNavigate()
     const validateForm = () => {
@@ -54,9 +53,7 @@ function Login() {
           // Proceed with form submission
           navigate('/upload');
       } else {
-          // Display validation errors
-          setErrors(validationErrors);
-          // Show error toasts
+
           if (validationErrors.email) {
               toast.error(validationErrors.email);
           }

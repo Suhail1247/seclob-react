@@ -83,7 +83,7 @@ function Dashboard(props) {
                     <RiDashboardFill
                       style={{
                         color:
-                          props.title == "Dashboard"
+                          props.title === "Dashboard"
                             ? "rgba(96, 91, 255, 1)"
                             : "rgba(154, 154, 169, 1)",
                       }}
@@ -99,7 +99,7 @@ function Dashboard(props) {
                     <LuBarChart2
                       style={{
                         color:
-                          props.title == "Upload"
+                          props.title === "Upload"
                             ? "rgba(96, 91, 255, 1)"
                             : "rgba(154, 154, 169, 1)",
                       }}
@@ -115,7 +115,7 @@ function Dashboard(props) {
                     <HiOutlineTicket
                       style={{
                         color:
-                          props.title == "Invoice"
+                          props.title === "Invoice"
                             ? "rgba(96, 91, 255, 1)"
                             : "rgba(154, 154, 169, 1)",
                       }}
@@ -131,7 +131,7 @@ function Dashboard(props) {
                     <MdOutlineArticle
                       style={{
                         color:
-                          props.title == "Schedule"
+                          props.title === "Schedule"
                             ? "rgba(96, 91, 255, 1)"
                             : "rgba(154, 154, 169, 1)",
                       }}
@@ -147,7 +147,7 @@ function Dashboard(props) {
                     <FaCalendarAlt
                       style={{
                         color:
-                          props.title == "Calendar"
+                          props.title === "Calendar"
                             ? "rgba(96, 91, 255, 1)"
                             : "rgba(154, 154, 169, 1)",
                       }}
@@ -163,7 +163,7 @@ function Dashboard(props) {
                     <IoNotificationsSharp
                       style={{
                         color:
-                          props.title == "Notification"
+                          props.title === "Notification"
                             ? "rgba(96, 91, 255, 1)"
                             : "rgba(154, 154, 169, 1)",
                       }}
@@ -179,7 +179,7 @@ function Dashboard(props) {
                     <IoSettingsSharp
                       style={{
                         color:
-                          props.title == "Settings"
+                          props.title === "Settings"
                             ? "rgba(96, 91, 255, 1)"
                             : "rgba(154, 154, 169, 1)",
                       }}

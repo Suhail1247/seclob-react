@@ -111,11 +111,11 @@ function Upload() {
                 <Box sx={{ fontSize: '1.4vw' }}>
                     {uploadedFileName ? (
                         <Typography sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                            {uploadedFileName} <span style={{ color: 'red', cursor: 'pointer' }} onClick={() => { setUploadedFileName(''); setFileData(null); setUploaded(false) }}>Remove</span>
+                           <span style={{color:'rgba(153, 156, 160, 1)'}}> {uploadedFileName}</span> <span style={{ color: 'red', cursor: 'pointer' }} onClick={() => { setUploadedFileName(''); setFileData(null); setUploaded(false) }}>Remove</span>
                         </Typography>
                     ) : (
                         <label htmlFor="upload">
-                            Drop your excel sheet here or <span style={{ color: 'blue', cursor: 'pointer' }}>browse</span>
+                        <span style={{color:'rgba(153, 156, 160, 1)'}}>     Drop your excel sheet here or </span><span style={{ color: 'blue', cursor: 'pointer' }}>browse</span>
                         </label>
                     )}
                 </Box>
