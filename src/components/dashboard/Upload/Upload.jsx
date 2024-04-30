@@ -100,7 +100,7 @@ function Upload() {
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    border: 'dotted gray 1px'
+                    border: 'dashed gray 1px'
                 }}
                 onDragOver={handleDragOver}
                 onDrop={handleDrop}
