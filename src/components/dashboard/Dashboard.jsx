@@ -200,16 +200,20 @@ function Dashboard(props) {
     paddingRight: 2,
   }}
 >
-  <Box sx={{  ml: 1 }}>
+  <Box sx={{  ml: '.1vw' }}>
     <h3>{props.navText}</h3>
   </Box>
+ 
   <Stack direction="row"  >
-    <IoNotificationsOutline style={{ fontSize: '2vw' ,marginTop:'2vh', cursor:"pointer"}} />
+  <Box sx={{mt:'.5vw'}}>
+  <IoNotificationsOutline style={{ fontSize: '3vw' , cursor:"pointer"}} />
+  </Box>
+   
     <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
             size="small"
-            sx={{ ml: 2 }}
+            sx={{ ml: '1vw' }}
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
