@@ -120,7 +120,7 @@ function Upload() {
                     )}
                 </Box>
             </Box>
-            <Box>
+            <Box sx={{mt:2}}>
                 <Button
                     onClick={handleUpload}
                     variant="contained"
